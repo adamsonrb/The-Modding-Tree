@@ -1,19 +1,19 @@
 let modInfo = {
-	name: "The Body Tree",
-	id: "mymod",
-	author: "nobody",
-	pointsName: "health",
+	name: "The RPG Tree",
+	id: "rpgtree",
+	author: "Brando",
+	pointsName: "exp",
 	discordName: "",
 	discordLink: "",
-	initialStartPoints: new Decimal (100), // Used for hard resets and new players
+	initialStartPoints: new Decimal (0), // Used for hard resets and new players
 	
-	offlineLimit: 1,  // In hours
+	offlineLimit: 0,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
 	num: "0.0",
-	name: "Literally nothing",
+	name: "Beginning",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -21,7 +21,7 @@ let changelog = `<h1>Changelog:</h1><br>
 		- Added things.<br>
 		- Added stuff.`
 
-let winText = `You rip'd`
+let winText = `You won!`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
@@ -55,7 +55,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.lte(new Decimal("0"))
+	return player.points.lte(new Decimal("e99999999999999999999999999999999999999"))
 }
 
 
